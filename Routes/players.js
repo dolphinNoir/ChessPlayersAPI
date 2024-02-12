@@ -11,7 +11,7 @@ router.get('/findAll', async (req, res) => {
         if (limit && !isNaN(limit)) {
             limit = parseInt(limit);
         } else {
-            limit = 1072;
+            limit = 100;
         }
 
         const players = await player.find().limit(limit);
